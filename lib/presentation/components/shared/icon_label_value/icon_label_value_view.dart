@@ -8,15 +8,16 @@ class IconLabelValue extends StatelessWidget {
   final IconData? icon;
   final String label;
   late String? value;
+  late double? size;
 
-  IconLabelValue({
-    super.key,
-    required this.label,
-    this.widget,
-    this.color,
-    this.icon,
-    this.value,
-  });
+  IconLabelValue(
+      {super.key,
+      required this.label,
+      this.widget,
+      this.color,
+      this.icon,
+      this.value,
+      this.size});
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +36,7 @@ class IconLabelValue extends StatelessWidget {
             child: Icon(
               icon,
               color: color ?? ThemeColors.mainText,
+              size: size == null ? 14 : size!,
             ),
           ),
           const SizedBox(
@@ -42,9 +44,8 @@ class IconLabelValue extends StatelessWidget {
           ),
           Text(
             label,
-            style: TextStyle(
-              color: color ?? ThemeColors.mainText,
-            ),
+            style:
+                TextStyle(color: color ?? ThemeColors.mainText, fontSize: size),
             textAlign: TextAlign.end,
           ),
           const SizedBox(
@@ -54,6 +55,7 @@ class IconLabelValue extends StatelessWidget {
             value ?? "",
             style: TextStyle(
               color: color ?? ThemeColors.innerText,
+              fontSize: (size == null ? 14 : size! - 2),
             ),
           ),
         ],

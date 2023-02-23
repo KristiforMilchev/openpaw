@@ -23,15 +23,13 @@ class Home extends StatelessWidget {
       builder: (context, viewModel, child) => Material(
         child: Container(
             color: ThemeColors.mainThemeBackground,
-            child: Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Expanded(flex: 2, child: EventPanel()),
-                  Expanded(flex: 3, child: AreaMap()),
-                  const Expanded(flex: 2, child: CareOverviewPanel()),
-                ],
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Expanded(flex: 2, child: EventPanel()),
+                Expanded(flex: 3, child: AreaMap()),
+                const Expanded(flex: 2, child: CareOverviewPanel()),
+              ],
             )),
       ),
     );

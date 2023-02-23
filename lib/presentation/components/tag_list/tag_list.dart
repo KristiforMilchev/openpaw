@@ -13,6 +13,7 @@ class TagList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
+      onViewModelReady: (viewModel) => viewModel.ready(context),
       viewModelBuilder: () => TagListViewModel(),
       builder: (context, viewModel, child) => ResponsiveBuilder(
           fullSize: Row(
@@ -21,26 +22,32 @@ class TagList extends StatelessWidget {
               IconLabelValue(
                 icon: Icons.merge_type,
                 label: "Dog",
+                size: viewModel.getFontSize(),
               ),
               IconLabelValue(
                 icon: Icons.male,
                 label: "Male",
+                size: viewModel.getFontSize(),
               ),
               IconLabelValue(
                 icon: Icons.update,
                 label: "10-05-2023 -> 12:30",
+                size: viewModel.getFontSize(),
               ),
               IconLabelValue(
                 icon: Icons.bookmark,
                 label: "Agressive toward male",
+                size: viewModel.getFontSize(),
               ),
               IconLabelValue(
                 icon: Icons.sentiment_satisfied_rounded,
                 label: "Good health condition",
+                size: viewModel.getFontSize(),
               ),
               IconLabelValue(
                 icon: Icons.fastfood_outlined,
                 label: "Fed",
+                size: viewModel.getFontSize(),
               ),
             ],
           ),
@@ -50,16 +57,14 @@ class TagList extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   IconLabelValue(
-                    icon: Icons.merge_type,
-                    label: "Dog",
-                  ),
-                  IconLabelValue(
                     icon: Icons.male,
                     label: "Male",
+                    size: viewModel.getFontSize(),
                   ),
                   IconLabelValue(
                     icon: Icons.update,
                     label: "10-05-2023 -> 12:30",
+                    size: viewModel.getFontSize(),
                   ),
                 ],
               ),
@@ -67,16 +72,29 @@ class TagList extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   IconLabelValue(
-                    icon: Icons.bookmark,
-                    label: "Agressive toward male",
-                  ),
-                  IconLabelValue(
                     icon: Icons.sentiment_satisfied_rounded,
                     label: "Good health condition",
+                    size: viewModel.getFontSize(),
                   ),
                   IconLabelValue(
                     icon: Icons.fastfood_outlined,
                     label: "Fed",
+                    size: viewModel.getFontSize(),
+                  ),
+                ],
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  IconLabelValue(
+                    icon: Icons.merge_type,
+                    label: "Dog",
+                    size: viewModel.getFontSize(),
+                  ),
+                  IconLabelValue(
+                    icon: Icons.bookmark,
+                    label: "Agressive toward male",
+                    size: viewModel.getFontSize(),
                   ),
                 ],
               )
