@@ -16,17 +16,19 @@ class CareOverviewPanel extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Care overview",
-                style: GeneralTheme.setText(
-                  size: 25,
+          Container(
+            padding: const EdgeInsets.all(10),
+            margin: const EdgeInsets.fromLTRB(25, 5, 25, 5),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Care overview",
+                  style: GeneralTheme.setText(size: 20),
                 ),
-              ),
-              Icon(Icons.ac_unit),
-            ],
+                Icon(Icons.ac_unit),
+              ],
+            ),
           ),
           SizedBox(
             height: 50,

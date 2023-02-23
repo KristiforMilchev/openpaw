@@ -1,6 +1,7 @@
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 
 import 'package:flutter/material.dart';
+import 'package:openpaw/presentation/components/shared/icon_label_value/icon_label_value_view.dart';
 import 'dart:math' as math;
 
 import '../../../../domain/Assets/styles.dart';
@@ -42,6 +43,21 @@ class EventPanel extends StatelessWidget {
               margin: EdgeInsets.all(10),
               child: ListView(
                 children: [
+                  Container(
+                    color: ThemeColors.mainThemeBackground,
+                    child: InkWell(
+                      onTap: () => {},
+                      child: Container(
+                        padding: EdgeInsets.all(20),
+                        child: IconLabelValue(
+                          label: "Create new event",
+                          icon: Icons.add_home_work_outlined,
+                          color: ThemeColors.innerText,
+                          size: GeneralTheme.getSize(context),
+                        ),
+                      ),
+                    ),
+                  ),
                   Container(
                     padding: EdgeInsets.all(20),
                     margin: EdgeInsets.all(20),

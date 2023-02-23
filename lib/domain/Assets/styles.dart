@@ -75,4 +75,13 @@ class GeneralTheme {
       "https://yt3.ggpht.com/ytc/AL5GRJVSGg8d7zwUuFS4Xb5-qZnHQC47ViYgo4N-OhShuw=s48-c-k-c0x00ffffff-no-rj";
   static double btnTextSize = 12;
   static double btnIconSize = 14;
+
+  static getSize(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    if (width <= 1920) {
+      return 12.0;
+    }
+
+    return 14.0;
+  }
 }

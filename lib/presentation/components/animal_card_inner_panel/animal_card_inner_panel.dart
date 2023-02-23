@@ -34,7 +34,7 @@ class AnimalCardInnerPanel extends StatelessWidget {
                           IconLabelValue(
                             label: "Information",
                             icon: Icons.location_on_outlined,
-                            size: viewModel.getHeadingFontSize(),
+                            size: GeneralTheme.getSize(context),
                           ),
                           const SizedBox(
                             height: 20,
@@ -43,7 +43,7 @@ class AnimalCardInnerPanel extends StatelessWidget {
                             label: "Floor A",
                             icon: Icons.home,
                             value: "Cell B",
-                            size: viewModel.getFontSize(),
+                            size: GeneralTheme.getSize(context),
                           ),
                           const SizedBox(
                             height: 10,
@@ -52,7 +52,7 @@ class AnimalCardInnerPanel extends StatelessWidget {
                             label: "Current Location",
                             icon: Icons.location_on,
                             value: "Out for a walk",
-                            size: viewModel.getFontSize(),
+                            size: GeneralTheme.getSize(context),
                           ),
                           const SizedBox(
                             height: 10,
@@ -61,7 +61,7 @@ class AnimalCardInnerPanel extends StatelessWidget {
                             label: "Breed",
                             icon: Icons.toys,
                             value: "Pitbull",
-                            size: viewModel.getFontSize(),
+                            size: GeneralTheme.getSize(context),
                           ),
                           const SizedBox(
                             height: 10,
@@ -70,7 +70,7 @@ class AnimalCardInnerPanel extends StatelessWidget {
                             label: "Age",
                             icon: Icons.insert_chart_outlined_sharp,
                             value: "6 years old",
-                            size: viewModel.getFontSize(),
+                            size: GeneralTheme.getSize(context),
                           ),
                           const SizedBox(
                             height: 10,
@@ -79,7 +79,7 @@ class AnimalCardInnerPanel extends StatelessWidget {
                             label: "Favorite food",
                             icon: Icons.food_bank_outlined,
                             value: "Chio Chips",
-                            size: viewModel.getFontSize(),
+                            size: GeneralTheme.getSize(context),
                           ),
                           const SizedBox(
                             height: 10,
@@ -88,7 +88,7 @@ class AnimalCardInnerPanel extends StatelessWidget {
                             label: "Favorite toy",
                             icon: Icons.toys,
                             value: "Socks",
-                            size: viewModel.getFontSize(),
+                            size: GeneralTheme.getSize(context),
                           ),
                         ],
                       ),
@@ -147,8 +147,9 @@ class AnimalCardInnerPanel extends StatelessWidget {
                                               child: Icon(
                                                 Icons.medical_services_outlined,
                                                 color: ThemeColors.innerText,
-                                                size:
-                                                    viewModel.getFontSize() + 3,
+                                                size: GeneralTheme.getSize(
+                                                        context) +
+                                                    3,
                                               ),
                                             ),
                                             SizedBox(
