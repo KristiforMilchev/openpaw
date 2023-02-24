@@ -22,10 +22,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<AppRouteViewModel>.reactive(
-        builder: (context, model, child) => Container(
-              child: model.app,
-            ),
-        viewModelBuilder: () => AppRouteViewModel(),
-        onViewModelReady: (model) => model.initialized(_appRouter, context));
+      builder: (context, model, child) => Container(
+        child: model.app,
+      ),
+      viewModelBuilder: () => AppRouteViewModel(),
+      onViewModelReady: (model) => model.initialized(_appRouter, context),
+    );
   }
 }
