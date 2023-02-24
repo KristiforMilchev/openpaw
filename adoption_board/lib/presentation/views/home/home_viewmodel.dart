@@ -1,28 +1,37 @@
 import 'dart:async';
 
+import 'package:core/infrastructure/ipage_router_service.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:stacked/stacked.dart';
 
 class HomeViewModel extends BaseViewModel {
-  ScrollController _scrollController = ScrollController(
+  GetIt getIt = GetIt.I;
+
+  late IPageRouterService _routerService;
+
+  final ScrollController _scrollController = ScrollController(
     keepScrollOffset: true,
     initialScrollOffset: 0.0,
   );
   get gridController => _scrollController;
 
   ready() {
-    Timer(Duration(seconds: 5), () {
+    _routerService = getIt.get<IPageRouterService>();
+    Timer(const Duration(seconds: 5), () {
       //scrollBottom();
     });
   }
 
-  animalSelected() {}
+  animalSelected() async {
+    await _routerService.changePage("/animal-profile");
+  }
 
   scrollTop() {
     _scrollController
         .animateTo(
           0,
-          duration: Duration(seconds: 20),
+          duration: const Duration(seconds: 20),
           curve: Curves.linear,
         )
         .whenComplete(() => scrollBottom());
@@ -34,7 +43,7 @@ class HomeViewModel extends BaseViewModel {
       _scrollController
           .animateTo(
             cursor,
-            duration: Duration(seconds: 20),
+            duration: const Duration(seconds: 20),
             curve: Curves.linear,
           )
           .whenComplete(() => scrollTop());

@@ -1,10 +1,9 @@
-import 'package:adoption_board/presentation/components/tag_list/tag_list.dart';
 import 'package:flutter/material.dart';
 
 import 'package:stacked/stacked.dart';
-
+import 'package:core/core.dart';
 import '../../../domain/Assets/styles.dart';
-import '../../components/shared/icon_label_value/icon_label_value_view.dart';
+
 import 'home_viewmodel.dart';
 
 class Home extends StatelessWidget {
@@ -49,82 +48,82 @@ class Home extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Container(
-                            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                IconLabelValue(
-                                  icon: Icons.warning_amber,
-                                  label: "Agressive",
-                                  size: GeneralTheme.getSize(context),
-                                ),
-                                IconLabelValue(
-                                  icon: Icons.medical_information_outlined,
-                                  label: "Special Needs",
-                                  size: GeneralTheme.getSize(context),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                IconLabelValue(
-                                  icon: Icons.calendar_month_outlined,
-                                  label: "5 years old",
-                                  size: GeneralTheme.getSize(context),
-                                ),
-                                IconLabelValue(
-                                  icon: Icons.male,
-                                  label: "Pitbull",
-                                  size: GeneralTheme.getSize(context),
-                                )
-                              ],
-                            ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                IconLabelValue(
-                                  icon: Icons.calendar_month_outlined,
-                                  label: "5 years old",
-                                  size: GeneralTheme.getSize(context),
-                                ),
-                                IconLabelValue(
-                                  icon: Icons.male,
-                                  label: "Pitbull",
-                                  size: GeneralTheme.getSize(context),
-                                )
-                              ],
-                            ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                IconLabelValue(
-                                  icon: Icons.calendar_month_outlined,
-                                  label: "5 years old",
-                                  size: GeneralTheme.getSize(context),
-                                ),
-                                IconLabelValue(
-                                  icon: Icons.male,
-                                  label: "Pitbull",
-                                  size: GeneralTheme.getSize(context),
-                                )
-                              ],
-                            ),
-                          ),
+                          // Container(
+                          //   padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          //   child: Row(
+                          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //     crossAxisAlignment: CrossAxisAlignment.start,
+                          //     children: [
+                          //       IconLabelValue(
+                          //         icon: Icons.warning_amber,
+                          //         label: "Agressive",
+                          //         size: GeneralTheme.getSize(context),
+                          //       ),
+                          //       IconLabelValue(
+                          //         icon: Icons.medical_information_outlined,
+                          //         label: "Special Needs",
+                          //         size: GeneralTheme.getSize(context),
+                          //       ),
+                          //     ],
+                          //   ),
+                          // ),
+                          // Container(
+                          //   padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          //   child: Row(
+                          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //     crossAxisAlignment: CrossAxisAlignment.start,
+                          //     children: [
+                          //       IconLabelValue(
+                          //         icon: Icons.calendar_month_outlined,
+                          //         label: "5 years old",
+                          //         size: GeneralTheme.getSize(context),
+                          //       ),
+                          //       IconLabelValue(
+                          //         icon: Icons.male,
+                          //         label: "Pitbull",
+                          //         size: GeneralTheme.getSize(context),
+                          //       )
+                          //     ],
+                          //   ),
+                          // ),
+                          // Container(
+                          //   padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          //   child: Row(
+                          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //     crossAxisAlignment: CrossAxisAlignment.start,
+                          //     children: [
+                          //       IconLabelValue(
+                          //         icon: Icons.calendar_month_outlined,
+                          //         label: "5 years old",
+                          //         size: GeneralTheme.getSize(context),
+                          //       ),
+                          //       IconLabelValue(
+                          //         icon: Icons.male,
+                          //         label: "Pitbull",
+                          //         size: GeneralTheme.getSize(context),
+                          //       )
+                          //     ],
+                          //   ),
+                          // ),
+                          // Container(
+                          //   padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          //   child: Row(
+                          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //     crossAxisAlignment: CrossAxisAlignment.start,
+                          //     children: [
+                          //       IconLabelValue(
+                          //         icon: Icons.calendar_month_outlined,
+                          //         label: "5 years old",
+                          //         size: GeneralTheme.getSize(context),
+                          //       ),
+                          //       IconLabelValue(
+                          //         icon: Icons.male,
+                          //         label: "Pitbull",
+                          //         size: GeneralTheme.getSize(context),
+                          //       )
+                          //     ],
+                          //   ),
+                          // ),
                           Center(
                             child: SizedBox(
                               width: 400,

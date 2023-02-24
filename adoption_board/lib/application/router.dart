@@ -1,3 +1,4 @@
+import 'package:adoption_board/presentation/views/animal_profile/animal_profile.dart';
 import 'package:auto_route/auto_route.dart';
 
 import 'package:get_it/get_it.dart';
@@ -6,6 +7,7 @@ import '../presentation/views/home/home_view.dart';
 
 @MaterialAutoRouter(replaceInRouteName: 'Page,Route', routes: <AutoRoute>[
   AutoRoute(page: Home, initial: true),
+  AutoRoute(page: AnimalProfile)
 ])
 
 // extend the generated private router

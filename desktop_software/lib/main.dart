@@ -1,12 +1,10 @@
-import 'package:adoption_board/application/router.dart';
-import 'package:adoption_board/application/router.gr.dart';
 import 'package:core/domain/models/app_router.dart';
 import 'package:flutter/material.dart';
 
 import 'package:stacked/stacked.dart';
 import 'application/app_router_viewmodel.dart';
 import 'application/locator.dart';
-import 'package:core/core.dart';
+import 'application/router.gr.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,8 +15,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  var appRouter = AppRouter();
-
+  final appRouter = AppRouter();
   final configured = false;
 
   MyApp({super.key});
@@ -26,12 +23,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _appRouter = CoreRouter(appRouter.pagesMap, appRouter.routes);
+
     return ViewModelBuilder<AppRouteViewModel>.reactive(
-      builder: (context, model, child) => Container(
-        child: model.app,
-      ),
-      viewModelBuilder: () => AppRouteViewModel(),
-      onViewModelReady: (model) => model.initialized(_appRouter, context),
-    );
+        builder: (context, model, child) => Container(
+              child: model.app,
+            ),
+        viewModelBuilder: () => AppRouteViewModel(),
+        onViewModelReady: (model) => model.initialized(_appRouter, context));
   }
 }
